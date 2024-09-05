@@ -18,6 +18,7 @@ contract TokenICO{
     uint256 public tokenSalePrice;
     uint256 public soldTokens;
 
+
     modifier onlyOwner(){
         require(msg.sender == owner, "Only owner can call this function");
         _;
@@ -35,7 +36,7 @@ contract TokenICO{
         tokenSalePrice = _tokenSalePrice;
     }
 
-    function multiply(uint256 x, uint256 y) internal pure returns (uint256){
+    function multiply(uint256 x, uint256 y) internal pure returns (uint256 z){
         require(y == 0 || (z = x * y) / y == x);
     }
 
