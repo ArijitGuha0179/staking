@@ -7,8 +7,9 @@ import {CONTRACT_DATA,deposit,withdraw,claimReward,addTokenMetaMask} from '../Co
 const index = () => {
   return (
     <>
-      <Header/>
+      <Header page={"admin"}/>
       <Footer/>
+      
     </>
   ); 
   

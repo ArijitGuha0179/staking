@@ -1,4 +1,4 @@
-import {ether} from 'ethers';
+import {ethers} from 'ethers';
 import StakingDappABI from './StakingDapp.json';
 import TokenICO from './TokenICO.json';
 import CustomTokenABI from './ERC20.json';
@@ -13,7 +13,7 @@ const DEPOSIT_TOKEN = process.env.NEXT_PUBLIC_DEPOSIT_TOKEN;
 const REWARD_TOKEN = process.env.NEXT_PUBLIC_REWARD_TOKEN;
 
 export function toEth(amount,decimals=18){
-    const toEth= ether.utils.formatUnits(amount,decimals);
+    const toEth= ethers.utils.formatUnits(amount,decimals);
     return toEth.toString();
 }
 
@@ -69,11 +69,11 @@ export const LOAD_TOKEN_ICO=async()=>{
 
         const ICO_TOKEN=await TOKEN_ICO_ERC20();
         const token={
-            tokenBal:ether.utils.formatUnits(tokenDetails.balance.toString()),
+            tokenBal:ethers.utils.formatUnits(tokenDetails.balance.toString()),
             name:tokenDetails.name,
             symbol:tokenDetails.symbol,
-            supply:ether.utils.formatUnits(tokenDetails.supply.toString()),
-            tokenPrice:ether.utils.formatUnits(tokenDetails.tokenPrice.toString()),
+            supply:ethers.utils.formatUnits(tokenDetails.supply.toString()),
+            tokenPrice:ethers.utils.formatUnits(tokenDetails.tokenPrice.toString()),
             tokenAddr:tokenDetails.tokenAddr,
             owner:contractOwner.toLowercase(),
             soldTokens:soldTokens.toNumber(),

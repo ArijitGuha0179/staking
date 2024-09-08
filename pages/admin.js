@@ -14,7 +14,35 @@ import {CONTRACT_DATA,transferToken,createPool,sweep,modifyPool} from "../Contex
 const ADMIN_ADDRESS= process.env.NEXT_PUBLIC_ADMIN_ADDRESS;
 
 const admin = () => {
-  return <div>admin</div>;
-};
+  const {address} =useAccount();
+  const [loader,setLoader]=useState(false);
+  const [checkAdmin,setCheckAdmin]=useState(true);
+  const [poolDetails,setPoolDetails]=useState();
+  const [modifyPoolID,setModifyPoolID]=useState();
 
+  const LOAD_DATA=async()=>{
+    if(address){
+      setLoader(true);
+      if(address?.toLowerCase()===ADMIN_ADDRESS?.toLowerCase()){
+        setCheckAdmin(false);
+        const data=await CONTRACT_DATA(address);
+        console.log(data);
+        setPoolDetails(data);
+      }
+      setLoader(false);  
+    }
+  };
+
+  useEffect(()=>{
+    LOAD_DATA();
+  },[]);
+  return (
+    <>
+      <Header/>
+      <Footer/>
+      {checkAdmin && <Auth/>}
+      {loader && <Loader/>}
+    </>
+  );
+};
 export default admin;
