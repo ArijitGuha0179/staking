@@ -165,8 +165,9 @@ export async function transferToken(amount,transferAddress){
 
         const transferAmount=ethers.utils.parseEther(amount);
         const approveTx=await stakingTokenObj.transfer(transferAddress,transferAmount);
-        await approveTx.wait();
+        const receipt=await approveTx.wait();
         notifySuccess("Token transfered successfully");
+        return receipt;
 
     }catch(error){
         console.log(error);

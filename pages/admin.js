@@ -35,11 +35,29 @@ const admin = () => {
 
   useEffect(()=>{
     LOAD_DATA();
-  },[]);
+  },[address]);
   return (
     <>
       <Header/>
+      <AdminHead/>
+      <Admin poolDetails={poolDetails} transferToken={transferToken} 
+      address={address} 
+      setLoader={setLoader}
+      createPool={createPool}
+      sweep={sweep}
+      setModifyPoolID={setModifyPoolID}
+      />
       <Footer/>
+
+      <UpdateAPYModel 
+      poolDetails={poolDetails}
+      setLoader={setLoader}
+      modifyPool={modifyPool}
+      modifyPoolID={modifyPoolID}
+      />
+      <ICOSale 
+      setLoader={setLoader}
+      />
       {checkAdmin && <Auth/>}
       {loader && <Loader/>}
     </>

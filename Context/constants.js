@@ -63,24 +63,29 @@ export const LOAD_TOKEN_ICO=async()=>{
     try{
         const contract=await TOKEN_ICO_CONTRACT();
         const tokenAddress=await contract.tokenAddress();
-        const tokenDetails=await contract.getTokenDetails();
-        const contractOwner=await contract.owner();
-        const soldTokens=await contract.soldTokens();
+        const ZERO_ADDRESS="0x0000000000000000000000000000000000000000";
+        if(tokenAddress!=ZERO_ADDRESS){
+            console.log("tokenAddress",tokenAddress);
+            const tokenDetails=await contract.gettokenDetails();
+            const contractOwner=await contract.owner();
+            const soldTokens=await contract.soldTokens();
 
-        const ICO_TOKEN=await TOKEN_ICO_ERC20();
-        const token={
-            tokenBal:ethers.utils.formatUnits(tokenDetails.balance.toString()),
-            name:tokenDetails.name,
-            symbol:tokenDetails.symbol,
-            supply:ethers.utils.formatUnits(tokenDetails.supply.toString()),
-            tokenPrice:ethers.utils.formatUnits(tokenDetails.tokenPrice.toString()),
-            tokenAddr:tokenDetails.tokenAddr,
-            owner:contractOwner.toLowercase(),
-            soldTokens:soldTokens.toNumber(),
-            token:ICO_TOKEN,
-        };
+            const ICO_TOKEN=await TOKEN_ICO_ERC20();
+            const token={
+                tokenBal:ethers.utils.formatUnits(tokenDetails.balance.toString()),
+                name:tokenDetails.name,
+                symbol:tokenDetails.symbol,
+                supply:ethers.utils.formatUnits(tokenDetails.supply.toString()),
+                tokenPrice:ethers.utils.formatUnits(tokenDetails.tokenPrice.toString()),
+                tokenAddr:tokenDetails.tokenAddr,
+                owner:contractOwner.toLowercase(),
+                soldTokens:soldTokens.toNumber(),
+                token:ICO_TOKEN,
+            };
 
-        return token;
+            return token;
+        }
+        
     }catch(error){
         console.log(error);
     }
