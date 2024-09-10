@@ -78,7 +78,7 @@ export const LOAD_TOKEN_ICO=async()=>{
                 supply:ethers.utils.formatUnits(tokenDetails.supply.toString()),
                 tokenPrice:ethers.utils.formatUnits(tokenDetails.tokenPrice.toString()),
                 tokenAddr:tokenDetails.tokenAddr,
-                owner:contractOwner.toLowercase(),
+                owner:contractOwner.toLowerCase(),
                 soldTokens:soldTokens.toNumber(),
                 token:ICO_TOKEN,
             };
@@ -112,15 +112,15 @@ export const TOKEN_ICO_ERC20=async()=>{
             //USER Address
     
             const userAddress=await signer.getAddress();
-            const nativeBalance=await signer.getBalance(userAddress);
-            const balance=await contractReader.balanceOf(userAddress);
+            const nativeBalance=await signer.getBalance();
+            
             const token={
                 address:await contractReader.address,
                 name:await contractReader.name(),
                 symbol:await contractReader.symbol(),
                 decimals:await contractReader.decimals(),
                 supply:toEth(await contractReader.totalSupply()),
-                balance:toEth(balance),
+                balance:toEth(await contractReader.balanceOf(userAddress)),
                 nativeBalance:toEth(nativeBalance.toString()),
             };
             return token;

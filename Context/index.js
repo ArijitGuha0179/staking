@@ -356,7 +356,7 @@ export const BUY_TOKEN=async(amount)=>{
     }
 }
 
-export const BUY_WITHDRAW=async()=>{
+export const TOKEN_WITHDRAW=async()=>{
     try{    
         notifySuccess("Calling ICO Contract...");
         const contract=await TOKEN_ICO_CONTRACT();
