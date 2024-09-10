@@ -328,11 +328,11 @@ export const BUY_TOKEN=async(amount)=>{
         const contract=await TOKEN_ICO_CONTRACT();
 
         const tokenDetails=await contract.gettokenDetails();
-
-        const availableToken=ethers.utils.parseEther(tokenDetails.balance.toString());
-
+        console.log("tokenDetails.balance",(tokenDetails.balance));
+        const availableToken=ethers.utils.formatEther(tokenDetails.balance.toString());
+        console.log("availableToken",availableToken);
         if(availableToken>1){
-            const price=ethers.utils.formatEther(tokenDetails.price.toString()) * Number(amount);
+            const price=ethers.utils.formatEther(tokenDetails.tokenPrice.toString()) * Number(amount);
 
             const payAmount=ethers.utils.parseEther(price.toString(),"ether");
 

@@ -24,7 +24,8 @@ const ICOSale = ({setLoader}) => {
     setLoader(true);
     console.log(quantity);
     const receipt=await BUY_TOKEN(quantity);
-    if(receipt.success){
+    console.log(receipt);
+    if(receipt){
       console.log(receipt);
       setLoader(false);
       window.location.reload();
