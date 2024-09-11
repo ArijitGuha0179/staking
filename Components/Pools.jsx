@@ -128,9 +128,9 @@ const Pools = ({setPoolID,poolDetails,setSelectedPool,setSelectedToken}) => {
               <button className="apool__btn"
               data-bs-target="#modal-apool" data-bs-toggle="modal" type="button"
               onClick={
-                (()=>
-                setPoolID(index==0 ? 0:index==1 ? 1:index==2 ? 2:""),setSelectedPool(pool),setSelectedToken(pool))
-              }
+                ()=>(
+                setPoolID(index==0 ? 0:index==1 ? 1:index==2 ? 2:""),setSelectedPool(pool),setSelectedToken(pool)
+              )}
               >
                 Invest
               </button>

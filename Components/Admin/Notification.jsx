@@ -47,7 +47,7 @@ const Notification = ({index,notification,poolDetails}) => {
           <div className="progress-bar progress-bar-striped progress-bar-animated" 
           style={{width:`${percentage}%`}}>
             <span>
-              {percentage.toString().slice(0,2)}%
+              {percentage?.toString().slice(0,2)}%
             </span>
           </div>
         </div>

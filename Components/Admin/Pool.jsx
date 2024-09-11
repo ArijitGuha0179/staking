@@ -20,7 +20,7 @@ const Pool = ({poolDetails,createPool,setLoader,setModifyPoolID}) => {
     setLoader(true);
     console.log(pool);
     const receipt=await createPool(pool);
-    if(receipt.success){
+    if(receipt){
       console.log(receipt);
       setLoader(false);
       window.location.reload();

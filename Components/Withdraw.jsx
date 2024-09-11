@@ -57,7 +57,7 @@ const Withdraw = ({setWithdrawPoolID,poolDetails}) => {
                 <button className="node__btn"
               data-bs-target="#modal-node" data-bs-toggle="modal" type="button"
               onClick={
-                setWithdrawPoolID(index == 0?0:index==1?1:index==2?2:"")
+                ()=>setWithdrawPoolID(index == 0?0:index==1?1:index==2?2:"")
                 
               }
               >
