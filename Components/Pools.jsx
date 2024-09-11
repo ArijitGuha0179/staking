@@ -14,8 +14,8 @@ const Pools = ({setPoolID,poolDetails,setSelectedPool,setSelectedToken}) => {
       <div className="row">
         <div className="col-12 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
           <div className="section-title">
-            <h2> Staking Pools</h2>
-            <p>
+            <h2 style={{color:"white"}}> Staking Pools</h2>
+            <p style={{color:"white"}}>
               Pools for staking
             </p>
           </div>
