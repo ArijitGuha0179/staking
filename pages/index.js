@@ -37,8 +37,8 @@ const index = () => {
       <Pools 
        setPoolID={setPoolID}
        poolDetails={poolDetails}
-       selectedPool={selectedPool}
-       selectedToken={selectedToken}
+       setSelectedPool={setSelectedPool}
+       setSelectedToken={setSelectedToken}
       />
       <Token
        poolDetails={poolDetails}
