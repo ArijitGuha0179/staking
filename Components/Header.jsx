@@ -37,9 +37,9 @@ const Header = ({page}) => {
                 <span />
               </button>
               <a href="/" className="header_logo">
-                <img src="img/logo.svg" alt="" />
+                {/* <img src="img/logo.svg" alt="" /> */}
               </a>
-              <span className="header__tagline">Crypto King</span>
+              <span className="header__tagline"><strong>Crypto Staking App</strong></span>
               <ul className="header__nav" id="header__nav">
                 {navigation.map((item, index) => (
                   <li key={index}>

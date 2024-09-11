@@ -27,7 +27,7 @@ const Pools = ({setPoolID,poolDetails,setSelectedPool,setSelectedToken}) => {
             <div className={`col-12 ${index===0 || index===1 ?"col-md-6":index===2 ? "":""} col-lg-4`} key={index}>
               <div className="apool">
                 <h3 className="apool__title">
-                {index===0 ?"Maximum":index===1 ? "Standard":index===2?"Lite":"Advance"}
+                {index===0 ?"Maximum":index===1 ? "Standard":index===2?"Elite":"Advance"}
                 </h3>
                 <ul className={`nav nav-tabs apool__tabs apool__tabs--${index===0 ?"orange":index===1 ? "green":index===2?"blue":"red"}`}
                 

@@ -47,7 +47,7 @@ const admin = () => {
       sweep={sweep}
       setModifyPoolID={setModifyPoolID}
       />
-      <Footer/>
+      {/* <Footer/> */}
 
       <UpdateAPYModel 
       setLoader={setLoader}

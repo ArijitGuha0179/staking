@@ -44,9 +44,7 @@ const HeroSection = ({addTokenMetaMask}) => {
           <div className="col-12 col-lg-7 col-xl-6">
             <div className="hero__content hero__content--first">
               <h1 className="hero__title">
-                <strong>Crypto King</strong>
-                <br />
-                Best Return on Investment
+                <strong>Gives You the Best Return!!</strong>
               </h1>
               <div className="hero__btns">
                 <a data-bs-target="#modal-deposit1" data-bs-toggle="modal" className="hero__btn">

@@ -53,9 +53,9 @@ const index = () => {
       <Notification
       poolDetails={poolDetails}
       />
-      <Partners/>
+      {/* <Partners/> */}
       <Ask setContactUs={setContactUs}/>
-      <Footer/>
+      {/* <Footer/> */}
 
       {/* Modals */}
       
