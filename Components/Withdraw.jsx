@@ -11,9 +11,7 @@ const Withdraw = ({setWithdrawPoolID,poolDetails}) => {
         <div className="col-12 col-lg-8 offset-md-2 col-xl-6 offset-lg-3">
           <div className="section-title" style={{color:"white"}}>
             <h2> Staking Rewards</h2>
-            <p style={{color:"white"}}>
-              Rewards staked
-            </p>
+            
           </div>
         </div>
       </div>
@@ -61,7 +59,7 @@ const Withdraw = ({setWithdrawPoolID,poolDetails}) => {
                 
               }
               >
-                Withdraw
+                Withdraw or Claim
               </button> 
             </div>
           </div>

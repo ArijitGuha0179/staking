@@ -20,10 +20,7 @@ const Header = ({page}) => {
       name:"Crypto",
       link:"#crypto",
     },
-    {
-      name:"Partners",
-      link:"#partners",
-    },
+    
   ];
   return (
     <header className="header">
@@ -39,7 +36,7 @@ const Header = ({page}) => {
               <a href="/" className="header_logo">
                 {/* <img src="img/logo.svg" alt="" /> */}
               </a>
-              <span className="header__tagline"><strong>Crypto Staking App</strong></span>
+              <span className="header__tagline"><h2>Crypto Staking App</h2></span>
               <ul className="header__nav" id="header__nav">
                 {navigation.map((item, index) => (
                   <li key={index}>

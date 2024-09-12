@@ -14,10 +14,8 @@ const Notification = ({poolDetails,page}) => {
           page!="activity" && (
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
           <div className="section-title">
-            <h2 style={{color:"white"}}>Active Notifications </h2>
-            <p style={{color:"white"}}>
-              All the notifications that are active
-            </p>
+            <h2 style={{color:"white"}}>Notifications </h2>
+            
           </div>
         </div>
           ) 
