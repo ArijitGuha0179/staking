@@ -2,6 +2,10 @@
 
 The **Crypto Staking App** is a decentralized application (DApp) that allows users to buy the **ARCHI** ERC20 token using ETH, stake the token to earn rewards, and withdraw their tokens after a locking period. The app includes an admin panel for managing staking pools and a notification system to keep users updated on the protocol status.
 
+## Demo 
+
+[Live Site](https://staking-pearl.vercel.app/)
+
 ## Features
 
 ### User Features
