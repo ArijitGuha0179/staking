@@ -37,7 +37,7 @@ const admin = () => {
     LOAD_DATA();
   },[address]);
   return (
-    <>
+    <div className="body-backgroundColor">
       <Header/>
       <AdminHead/>
       <Admin poolDetails={poolDetails} transferToken={transferToken} 
@@ -59,7 +59,7 @@ const admin = () => {
       />
       {checkAdmin && <Auth/>}
       {loader && <Loader/>}
-    </>
+    </div>
   );
 };
 export default admin;

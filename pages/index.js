@@ -27,7 +27,7 @@ const index = () => {
     LOAD_DATA();
   },[address]);
   return (
-    <>
+    <div className="body-backgroundColor">
       <Header page={"admin"}/>
       <HeroSection
        poolDetails={poolDetails}
@@ -87,7 +87,7 @@ const index = () => {
 
 
 
-    </>
+    </div>
   ); 
   
 };
